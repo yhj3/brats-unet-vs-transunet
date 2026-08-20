@@ -1,0 +1,32 @@
+((brainseg) ) (base) yihangj3@focalcluster:~/brain-mri-segmentation$ cd ~/brain-mri-segmentation
+export PYTHONPATH=$PWD/src                                           cd ~/brain-mri-segmentation
+export PYTHONPATH=$PWD/srcS=0
+export CUDA_VISIBLE_DEVICES=0
+python src/unet_v3.py \
+python src/unet_v3.py \
+  --model transunet \selected_train_subject.csv \
+  --train_csv ./data/selected_train_subject.csv \
+  --img_size 224 \iT-B_16 \
+  --vit_name R50-ViT-B_16 \
+  --pretrained_path "" \
+  --n_skip 3 \\
+  --epochs 20 \16 \
+  --batch_size 16 \
+  --lr 1e-4 \
+  --amp \point_dir ./checkpoints/transunet \
+  --checkpoint_dir ./checkpoints/transunet \
+  --dice_w 0.5 \epochs 2 \
+  --dice_warmup_epochs 2 \,1
+  --class_weights 0.05,1,1,1
+2025-12-10 04:01:01,523 [INFO] Crop coords: (40, 197, 29, 223)
+2025-12-10 04:01:01,653 [WARNING] [Dataset] skip subject BraTS20_Training_355, has=['flair', 't1', 't1ce', 't2']
+2025-12-10 04:01:21,536 [INFO] Sample image: (4, 224, 224), mask: (224, 224)
+2025-12-10 04:01:21,536 [INFO] Device=cuda, num_gpus=1
+2025-12-10 04:01:22,809 [INFO] Model=transunet, run_id=transunet_718bc36_c86b9b33, cfg={'in_ch': 4, 'n_classes': 4, 'img_size': 224, 'vit_name': 'R50-ViT-B_16', 'pretrained_path': '', 'n_skip': 3}
+2025-12-10 04:01:25,466 [INFO] Use weighted CE: [0.05, 1.0, 1.0, 1.0]
+2025-12-10 04:01:25,466 [INFO] Start training: run_id=transunet_718bc36_c86b9b33, model=transunet, epochs=20, batch=16, lr=0.0001, amp=True, workers=4
+Epoch 1/20: 100%|███████| 2328/2328 [1:03:06<00:00,  1.63s/batch, ce=0.142, dice=0.879, dw=0.00, loss=0.142]
+2025-12-10 05:04:32,090 [INFO] Epoch 1 train: loss=0.2846, ce=0.2846, dice=0.8638
+2025-12-10 05:14:56,155 [INFO] Epoch 1 val foreground dice=0.6428
+2025-12-10 05:14:58,143 [INFO] Saved: checkpoints/transunet/transunet_718bc36_c86b9b33/checkpoint_transunet_718bc36_c86b9b33_epoch1.pth
+Epoch 2/20:  39%|███▉      | 909/2328 [34:15<33:36,  1.42s/batch, ce=0.120, dice=0.779, dw=0.00, loss=0.120]

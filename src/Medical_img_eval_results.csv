@@ -1,0 +1,25 @@
+Checkpoint,VoxelDice_Label1,VoxelDice_Label2,VoxelDice_Label3,Mean Voxel Dice,LWDice_Label1,LWDice_Label2,LWDice_Label3,Mean LW Dice,HD95_Label1,HD95_Label2,HD95_Label3,Mean HD95
+checkpoint_epochunet_training_1.pth,0.16921112759700713,0.4660247024901277,0.35204172636387,0.3290925188170016,0.09795041430735082,0.5405578961865972,0.30546975935243026,0.31465935661545946,8.817598485310903,10.2361927704592,7.359932872521941,8.80457470943068
+
+
+Dataset size: 4477, Dataloader batches: 28
+Evaluating: 100%|████████████████████████████████████| 28/28 [10:10<00:00, 21.80s/it]
+==== Per-Label Results ====
+Label 1: Voxel Dice = 0.1692, LW Dice = 0.0980, HD95 = 8.8176
+Label 2: Voxel Dice = 0.4660, LW Dice = 0.5406, HD95 = 10.2362
+Label 3: Voxel Dice = 0.3520, LW Dice = 0.3055, HD95 = 7.3599
+==== Averages Across All Labels (1,2,3) ====
+Mean Voxel-wise Dice = 0.3291
+Mean Lesion-wise Dice = 0.3147
+Mean Hausdorff95 = 8.8046
+
+Evaluation Results for checkpoint_epochunet_training_1.pth:
+  Label 1: VoxelDice = 0.1692, LesionWiseDice = 0.0980, HD95 = 8.8176
+  Label 2: VoxelDice = 0.4660, LesionWiseDice = 0.5406, HD95 = 10.2362
+  Label 3: VoxelDice = 0.3520, LesionWiseDice = 0.3055, HD95 = 7.3599
+  --- Averages Across Labels (1,2,3) ---
+  Mean Voxel-wise Dice = 0.3291
+  Mean Lesion-wise Dice = 0.3147
+  Mean Hausdorff95      = 8.8046
+
+Evaluation results saved to 'evaluation_results.csv'

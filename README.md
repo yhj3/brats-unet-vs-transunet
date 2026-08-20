@@ -150,8 +150,13 @@ The TransUNet checkpoint is hosted on the Hugging Face Hub (too large for GitHub
 **https://huggingface.co/yihangj3/brats-transunet**
 
 ```bash
-hf download yihangj3/brats-transunet checkpoint_improved_transunet_epoch20.pth
+hf download yihangj3/brats-transunet checkpoint_jobA_epoch19.pth
 ```
+
+`checkpoint_jobA_epoch19.pth` is the **TransUNet baseline** — the 0.7575 row, and the model
+that produced the qualitative predictions in `viz/jobA_epoch19/`. The repository also holds
+`checkpoint_improved_transunet_epoch20.pth` from a separate run; despite the name, it is not
+the best checkpoint and is not the model reported in the table above.
 
 ## Attribution
 
